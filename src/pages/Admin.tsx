@@ -12,7 +12,7 @@ interface Confirmation {
   created_at: string;
 }
 
-const ADMIN_PASSWORD = "festa-artur26@";
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
 const Admin = () => {
   const [password, setPassword] = useState("");
