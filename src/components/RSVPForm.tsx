@@ -1,18 +1,36 @@
 import { useState } from "react";
-import { Check, Loader2, Heart } from "lucide-react";
+import { Check, Loader2, Heart, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+
+// Data limite: 15/01/2026 às 00:00 (horário de Brasília)
+const RSVP_DEADLINE = new Date('2026-01-15T00:00:00-03:00');
+
+const isAfterDeadline = () => {
+  const now = new Date();
+  return now >= RSVP_DEADLINE;
+};
 
 export const RSVPForm = () => {
   const [fullName, setFullName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isConfirmed, setIsConfirmed] = useState(false);
   const { toast } = useToast();
+  const deadlinePassed = isAfterDeadline();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (deadlinePassed) {
+      toast({
+        title: "Prazo encerrado",
+        description: "O prazo para confirmação de presença já foi encerrado.",
+        variant: "destructive",
+      });
+      return;
+    }
     
     if (!fullName.trim()) {
       toast({
@@ -80,6 +98,27 @@ export const RSVPForm = () => {
     );
   }
 
+  if (deadlinePassed) {
+    return (
+      <section id="confirmacao" className="py-20 px-4 bg-background">
+        <div className="container max-w-xl mx-auto text-center">
+          <div className="p-12 rounded-3xl bg-card border border-border shadow-card">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
+              <Clock className="w-10 h-10 text-muted-foreground" />
+            </div>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+              Prazo Encerrado
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              O prazo para confirmação de presença foi encerrado em <br />
+              <span className="font-semibold text-foreground">15 de janeiro de 2026</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="confirmacao" className="py-20 px-4 bg-background">
       <div className="container max-w-xl mx-auto">
@@ -90,6 +129,9 @@ export const RSVPForm = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Preencha seu nome abaixo para confirmar
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Confirmações até <span className="font-semibold text-foreground">14/01/2026 às 23:59</span>
           </p>
         </div>
 
