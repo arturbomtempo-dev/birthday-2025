@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Loader2, Heart, Clock } from "lucide-react";
+import { Check, Loader2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
@@ -87,11 +87,10 @@ export const RSVPForm = () => {
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
               Presença Confirmada!
             </h2>
-            <p className="text-muted-foreground text-lg mb-6">
+            <p className="text-muted-foreground text-lg">
               Obrigado, <span className="text-primary font-semibold">{fullName}</span>!<br />
-              Estamos ansiosos para celebrar com você.
+              Artur fica muito feliz com sua confirmação. Até lá!
             </p>
-            <Heart className="w-8 h-8 text-primary mx-auto animate-pulse" />
           </div>
         </div>
       </section>
