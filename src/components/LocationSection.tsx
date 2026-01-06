@@ -18,7 +18,7 @@ export const LocationSection = () => {
           {/* Restaurant Image */}
           <div className="rounded-2xl overflow-hidden shadow-card border border-border">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80"
+              src="https://bhaz.com.br/wp-content/uploads/2023/04/trip-food-2.jpg"
               alt="TripFood Sapucaí - ambiente elegante"
               className="w-full h-64 md:h-80 object-cover"
             />
@@ -42,7 +42,7 @@ export const LocationSection = () => {
             </div>
 
             <a
-              href="https://maps.google.com/?q=TripFood+Sapucai+Belo+Horizonte"
+              href="https://www.google.com/maps/place/Trip+Food+Sapuca%C3%AD/@-19.9178451,-43.9325721,17z/data=!3m1!4b1!4m6!3m5!1s0xa6994302dc0c01:0xdf0b8b2be0b3ed2c!8m2!3d-19.9178451!4d-43.9325721!16s%2Fg%2F11gxfl675x?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all"
