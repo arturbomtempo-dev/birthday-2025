@@ -60,7 +60,7 @@ export const HeroSection = () => {
         >
           <a 
             href="#confirmacao"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-semibold text-base sm:text-lg hover:opacity-90 transition-all duration-300 shadow-glow animate-soft-blur"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-semibold text-base sm:text-lg hover:opacity-90"
           >
             Confirmar Presença
           </a>

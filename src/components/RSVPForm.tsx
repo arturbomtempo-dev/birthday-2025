@@ -155,7 +155,7 @@ export const RSVPForm = () => {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full h-12 sm:h-14 text-base sm:text-lg font-semibold bg-primary text-primary-foreground hover:opacity-90 rounded-xl shadow-glow transition-all duration-300"
+              className="w-full h-12 sm:h-14 text-base sm:text-lg font-semibold bg-primary text-primary-foreground hover:opacity-90 rounded-xl"
             >
               {isLoading ? (
                 <>
