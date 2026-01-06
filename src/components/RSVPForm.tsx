@@ -89,7 +89,7 @@ export const RSVPForm = () => {
             </h2>
             <p className="text-muted-foreground text-lg">
               Obrigado, <span className="text-primary font-semibold">{fullName}</span>!<br />
-              Artur fica muito feliz com sua confirmação. Até lá!
+              Artur fica muito feliz com sua confirmação. Te esperamos lá!
             </p>
           </div>
         </div>
