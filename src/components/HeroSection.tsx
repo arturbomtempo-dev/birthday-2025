@@ -41,7 +41,7 @@ export const HeroSection = () => {
             <Calendar className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
             <div className="text-left min-w-0">
               <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider">Data</p>
-              <p className="font-semibold text-foreground text-xs sm:text-sm">25 de Janeiro, 2026</p>
+              <p className="font-semibold text-foreground text-xs sm:text-sm">17 de Janeiro de 2026</p>
             </div>
           </div>
 

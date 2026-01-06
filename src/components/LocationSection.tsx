@@ -19,7 +19,7 @@ export const LocationSection = () => {
           <div className="rounded-2xl overflow-hidden shadow-card border border-border">
             <img
               src="https://bhaz.com.br/wp-content/uploads/2023/04/trip-food-2.jpg"
-              alt="TripFood Sapucaí - ambiente elegante"
+              alt="Trip Food Sapucaí - ambiente elegante"
               className="w-full h-64 md:h-80 object-cover"
             />
           </div>
@@ -32,10 +32,10 @@ export const LocationSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-2xl font-semibold text-foreground mb-2">
-                  TripFood Sapucaí
+                  Trip Food Sapucaí
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Rua Sapucaí, 383 - Floresta<br />
+                  Rua Sapucaí, 469 - Floresta<br />
                   Belo Horizonte - MG
                 </p>
               </div>
