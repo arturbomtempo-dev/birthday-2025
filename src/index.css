@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    --primary: 152 69% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 152 69% 50%;
+
+    --secondary: 150 10% 94%;
+    --secondary-foreground: 150 10% 20%;
+
+    --muted: 150 10% 96%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 152 69% 95%;
+    --accent-foreground: 152 69% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 10% 90%;
+    --input: 150 10% 90%;
+    --ring: 152 69% 40%;
+
+    --radius: 0.75rem;
+
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --gradient-primary: linear-gradient(135deg, hsl(152, 69%, 40%), hsl(152, 69%, 55%));
+    --gradient-hero: linear-gradient(180deg, hsl(150, 10%, 98%) 0%, hsl(150, 10%, 100%) 100%);
+    --shadow-glow: 0 0 40px hsl(152 69% 40% / 0.2);
+    --shadow-card: 0 4px 20px hsl(150 10% 15% / 0.08);
+  }
+
+  .dark {
+    --background: 150 10% 8%;
+    --foreground: 150 10% 95%;
+
+    --card: 150 10% 12%;
+    --card-foreground: 150 10% 95%;
+
+    --popover: 150 10% 10%;
+    --popover-foreground: 150 10% 95%;
+
+    --primary: 152 69% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 152 69% 55%;
+
+    --secondary: 150 10% 18%;
+    --secondary-foreground: 150 10% 90%;
+
+    --muted: 150 10% 15%;
+    --muted-foreground: 150 10% 60%;
+
+    --accent: 152 69% 15%;
+    --accent-foreground: 152 69% 70%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 10% 20%;
+    --input: 150 10% 20%;
+    --ring: 152 69% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(152, 69%, 45%), hsl(152, 69%, 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(150, 10%, 6%) 0%, hsl(150, 10%, 10%) 100%);
+    --shadow-glow: 0 0 60px hsl(152 69% 50% / 0.25);
+    --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
